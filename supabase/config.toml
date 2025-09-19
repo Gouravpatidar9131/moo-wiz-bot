@@ -1,1 +1,7 @@
 project_id = "ybakztvlzrfoayybtyvc"
+
+[functions.breed-recognition]
+verify_jwt = false
+
+[functions.livestock-chat]
+verify_jwt = false
