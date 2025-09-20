@@ -21,8 +21,11 @@ serve(async (req) => {
 
     const OPENROUTER_API_KEY = Deno.env.get('OPENROUTER_API_KEY');
     if (!OPENROUTER_API_KEY) {
-      throw new Error('OPENROUTER_API_KEY is not configured');
+      console.error('OPENROUTER_API_KEY environment variable not found');
+      throw new Error('OpenRouter API key is not configured. Please check your environment variables.');
     }
+
+    console.log('OpenRouter API key found, proceeding with analysis...');
 
     console.log('Analyzing breed recognition for region:', region);
 
